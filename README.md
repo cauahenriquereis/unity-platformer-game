@@ -64,9 +64,9 @@ only begun to unravel.
 
 ## 🎨 Art
 
-All character designs, sprites, and animations are **original artwork**,
-created exclusively for this project. No assets were taken from the web
-or third-party sources.
+All character sprites and animations are **original artwork**, created
+exclusively for this project. Background and environment assets were
+sourced from free resources available online.
 
 ## 👨‍💻 About
 
