@@ -1,0 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Parallax : MonoBehaviour
+{
+    private float length;
+    private float Startpos;
+    private Transform cam;
+
+    public float ParallaxEffect;
+
+    void Start()
+    {
+        Startpos = transform.position.x;
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        cam = Camera.main.transform;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float Repos = cam.transform.position.x * (1 - ParallaxEffect);
+        float Distance = cam.transform.position.x * ParallaxEffect;
+
+        transform.position = new Vector3(Startpos + Distance,transform.position.y,transform.position.z);
+
+   if(Repos > Startpos + length){
+Startpos += length;
+
+   }
+   else if( Repos < Startpos - length){
+    Startpos -= length;
+
+   }
+    }
+}
